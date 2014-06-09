@@ -31,12 +31,14 @@ module.exports = function(grunt) {
             src: ['css/style.css'],
             ext: '.min.css'
           }
-        }		
+        },
+        clean: ["css/style.css", "css/main.css"]	
     });
 
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-clean');
 
-    grunt.registerTask('default', ['compass', 'cssmin:combine', 'cssmin:minify']);
+    grunt.registerTask('default', ['compass', 'cssmin:combine', 'cssmin:minify', 'clean']);
 
 };
