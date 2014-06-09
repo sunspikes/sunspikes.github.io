@@ -23,7 +23,7 @@ module.exports = function(grunt) {
         cssmin: {
           combine: {
             files: {
-              'css/style.css': ['src/styles/libs/normalize.css', 'css/main.css']
+              'css/style.css': ['src/styles/libs/normalize.css', 'src/styles/libs/brandfont.css', 'css/main.css']
             }
           },      
           minify: {

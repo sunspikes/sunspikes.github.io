@@ -1,0 +1,37 @@
+@font-face {
+  font-family: "brandfont";
+  src: url("fonts/brandfont_8915a355811ed16d0b0aaa129a62dcd7.eot");
+  src: url("fonts/brandfont_8915a355811ed16d0b0aaa129a62dcd7.eot?#iefix") format("embedded-opentype"),
+       url("fonts/brandfont_8915a355811ed16d0b0aaa129a62dcd7.woff") format("woff"),
+       url("fonts/brandfont_8915a355811ed16d0b0aaa129a62dcd7.ttf") format("truetype"),
+       url("fonts/brandfont_8915a355811ed16d0b0aaa129a62dcd7.svg#brandfont") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "brandfont";
+    src: url("fonts/brandfont_8915a355811ed16d0b0aaa129a62dcd7.svg#brandfont") format("svg");
+  }
+}
+
+[data-icon]:before { content: attr(data-icon); }
+
+[data-icon]:before,
+.bf-lastfm:before,
+.bf-lastfm-square:before {
+  display: inline-block;
+  font-family: "brandfont";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.bf-lastfm:before { content: "\f109"; }
+.bf-lastfm-square:before { content: "\f10a"; }
