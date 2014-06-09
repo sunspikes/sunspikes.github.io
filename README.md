@@ -1,4 +1,4 @@
 sunspikes.github.io
 ====================
 
-http://sunspikes.com web site source
+http://sunspikes.com source
