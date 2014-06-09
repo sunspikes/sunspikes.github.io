@@ -1,0 +1,107 @@
+@import "compass/css3";
+
+//colors
+$color_semi_black: #222;
+$color_light_grey: #ccc;
+$color_black: #000;
+$color_white: #fff;
+$color_bluish: #6090ff;
+$color_reddish: #ad310b;
+$color_light_red: #e44d26;
+
+//fonts
+$font_helvetica: Helvetica;
+$font_helvetica_neue: Helvetica Neue;
+$font_arial: Arial;
+
+html {
+	color: $color_semi_black;
+	font-size: 1em;
+	line-height: 1.4;
+}
+body {
+	font: 16px/26px $font_helvetica, $font_helvetica_neue, $font_arial;
+	background-color: $color_bluish;
+	@include transition(background-color 1000ms linear);
+	&:hover {
+		background-color: $color_reddish;
+		@include transition(background-color 1000ms linear);
+	}
+}
+.browsehappy {
+	margin: .2em 0;
+	background: $color_light_grey;
+	color: $color_black;
+	padding: .2em 0;
+}
+a {
+	text-decoration: none;
+	color: #FFF;
+	&:link {
+		text-decoration: none;
+		color: #FFF;
+	}
+	&:visited {
+		text-decoration: none;
+		color: #FFF;
+	}
+}
+.wrapper {
+	width: 90%;
+	margin: 0 5%;
+}
+.main {
+	padding: 30px 0;
+	article {
+		float: none;
+		width: 100%;
+		h1 {
+			font-size: 2em;
+		}
+		div a {
+			display: inline-block;
+			padding: 6px;
+			margin: 0 10px;
+		}
+	}
+}
+@media only screen and(min-width:480px) {
+}
+@media only screen and(max-width:640px) {
+	.main article div {
+		margin: 0 auto;
+		width: 72px;
+	}
+}
+@media only screen and(min-width:768px) {
+    .main article {
+        float: none;
+        width: 100%;
+    }
+
+    .main article div {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-top: -50px;
+        margin-left: -260px;
+    }
+}
+@media only screen and(min-width:1140px) {
+	.wrapper {
+		width: 1026px;
+		margin: 0 auto;
+	}
+}
+.clearfix {
+	*zoom: 1;
+	&:after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+	&:before {
+		content: " ";
+		display: table;
+	}
+}
