@@ -51,7 +51,7 @@ a {
 	margin: 0 5%;
 }
 .main {
-	padding: 30px 0;
+	padding: 10px 0;
 	article {
 		float: none;
 		width: 100%;
@@ -64,6 +64,11 @@ a {
 			margin: 0 10px;
 		}
 	}
+}
+@media only screen and(min-height:640px) {
+    .main {
+        padding: 40px 0;
+    }
 }
 @media only screen and(min-width:480px) {
 }
