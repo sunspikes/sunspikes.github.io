@@ -52,6 +52,9 @@
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-24066594-1');ga('send','pageview');
+            var trackOutboundLink=function(e){ga("send","event","outbound","click",e,{hitCallback:function(){document.location=e}})}
+            var links=document.getElementsByTagName("a");
+            for(var i=0;i<links.length;i++){links[i].addEventListener("click",function(e){e.preventDefault();trackOutboundLink(this.href)},false)}
         </script>
     </body>
 </html>
