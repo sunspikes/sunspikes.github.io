@@ -27,18 +27,33 @@ module.exports = function(grunt) {
             }
           },      
           minify: {
-            expand: true,
-            src: ['css/style.css'],
-            ext: '.min.css'
+            options: {
+                keepSpecialComments: 0
+            },
+            files: {
+              'css/style.min.css': ['css/style.css']
+            }
           }
+        },
+        htmlmin: {
+            minify: {
+              options: {
+                removeComments: false,
+                collapseWhitespace: true
+              },
+              files: {
+                'index.html': 'src/index.html'
+              }
+            }
         },
         clean: ["css/style.css", "css/main.css"]	
     });
 
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-clean');
 
-    grunt.registerTask('default', ['compass', 'cssmin:combine', 'cssmin:minify', 'clean']);
+    grunt.registerTask('default', ['compass', 'cssmin:combine', 'cssmin:minify', 'htmlmin:minify', 'clean']);
 
 };
