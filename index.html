@@ -2,12 +2,13 @@
             <script src="js/respond.min.js"></script>
         <![endif]--></head><body><!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]--><div class="main-container"><div class="main wrapper clearfix"><article><section><div><a href="https://github.com/sunspikes"><i class="fa fa-github fa-2x"></i></a> <a href="https://www.linkedin.com/pub/krishnaprasad-mg/45/979/142"><i class="fa fa-linkedin fa-2x"></i></a> <a href="https://www.last.fm/user/sunspikes"><i class="fa bf-lastfm-square fa-2x"></i></a> <a href="https://instagram.com/landscape_hoppers/"><i class="fa fa-instagram fa-2x"></i></a> <a href="https://google.com/+KrishnaprasadMG"><i class="fa fa-google-plus fa-2x"></i></a> <a href="mailto:prasad@sunspikes.com?subject=Hello"><i class="fa fa-envelope fa-2x"></i></a></div></section></article></div><!-- #main --></div><!-- #main-container --><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        <![endif]--><div class="main-container"><div class="main wrapper clearfix"><article><section><div><a href="https://github.com/sunspikes"><i class="fa fa-github fa-2x"></i></a> <a href="https://www.linkedin.com/pub/krishnaprasad-mg/45/979/142"><i class="fa fa-linkedin fa-2x"></i></a> <a href="https://www.last.fm/user/sunspikes"><i class="fa bf-lastfm-square fa-2x"></i></a> <a href="https://www.instagram.com/landscape_hoppers/"><i class="fa fa-instagram fa-2x"></i></a> <a href="mailto:prasad@sunspikes.com?subject=Hello"><i class="fa fa-envelope fa-2x"></i></a></div></section></article></div><!-- #main --></div><!-- #main-container --><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-24066594-1');ga('send','pageview');
-            var trackOutboundLink=function(e){ga("send","event","outbound","click",e,{hitCallback:function(){document.location=e}})}
             var links=document.getElementsByTagName("a");
-            for(var i=0;i<links.length;i++){links[i].addEventListener("click",function(e){e.preventDefault();trackOutboundLink(this.href)},false)}</script></body></html>
+            for(var i=0;i<links.length;i++){
+                links[i].addEventListener("click",function(e){ga('send', 'event', {eventCategory: 'Outbound Link', eventAction: 'click', eventLabel: this.href, transport: 'beacon'})},false)
+            }</script></body></html>
